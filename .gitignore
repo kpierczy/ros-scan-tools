@@ -1,0 +1,7 @@
+# Ignore colcon directories
+build/
+build/**
+install/
+install/**
+log/
+log/**

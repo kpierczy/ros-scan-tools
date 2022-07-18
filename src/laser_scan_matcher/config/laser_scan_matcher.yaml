@@ -1,0 +1,76 @@
+# ====================================================================================================================================
+# @file       laser_scan_matcher.yaml
+# @author     Krzysztof Pierczyk (krzysztof.pierczyk@gmail.com)
+# @maintainer Krzysztof Pierczyk (krzysztof.pierczyk@gmail.com)
+# @date       Friday, 1st April 2022 12:32:04 am
+# @modified   Wednesday, 25th May 2022 4:44:01 pm
+# @project    scan-tools
+# @brief      Default configuration for the 'laser_scan_matcher' node
+#    
+#    
+# @copyright Krzysztof Pierczyk © 2022
+# ====================================================================================================================================
+
+/**:
+
+    # Node's parameters
+    ros__parameters:
+
+        # Base parameters
+        reference_frame: odom
+        base_frame:      base_link
+        target_frame:    base_link
+        # Motion prediction
+        use_imu:     true
+        use_odom:    true
+        use_vel:     false
+        stamped_vel: false
+        # Input parameters
+        range_min:  0.1
+        range_max:  50.0
+        # Cloud input parameters
+        use_cloud_input: false
+        cloud_res:        0.05
+        cloud_accept_nan: true
+        cloud_sorted:     true
+        # Output
+        publish_tf:                           true
+        publish_pose:                         true
+        publish_pose_stamped:                 false
+        publish_pose_with_covariance:         false
+        publish_pose_with_covariance_stamped: false
+        publish_odom:                         false
+        position_covariance:                  [ 1.0e-9, 1.0e-9, 1.0e-9 ]
+        orientation_covariance:               [ 1.0e-9, 1.0e-9, 1.0e-9 ]
+        # Keyframes
+        kf_dist_linear: 0.10
+        kf_dist_angular: 0.175
+        # Scan matching
+        max_iterations:             10
+        max_correspondence_dist:    0.3
+        max_angular_correction_deg: 45.0
+        max_linear_correction:      0.50
+        epsilon_xy:                 0.000001
+        epsilon_theta:              0.000001
+        outliers_max_prc:           0.90
+        # Scan matching (advanced)
+        sigma:                        0.010
+        use_corr_tricks:              true
+        restart:                      false
+        restart_threshold_mean_error: 0.01
+        restart_dt:                   1.0
+        restart_dtheta:               0.1
+        clustering_threshold:         0.25
+        orientation_neighbourhood:    10
+        use_point_to_line_distance:   true
+        do_alpha_test:                false
+        do_alpha_test_threshold_deg:  20.0
+        outliers_adaptive_order:      0.7
+        outliers_adaptive_mul:        2.0
+        do_visibility_test:           false
+        outliers_remove_doubles:      true
+        do_compute_covariance:        false
+        debug_verify_trick:           false
+        use_ml_weights:               false
+        use_sigma_weights:            false
+        debug_csm:                    false

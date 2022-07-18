@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+
+    <!-- Package's name -->
+    <name>csm</name>
+    <!-- Package's version -->
+    <version>0.0.0</version>
+    <!-- Package's description -->
+    <description>
+    
+    This is a ROS 3rd-party wrapper arround <a href = "http://www.ros.org/reps/rep-0136.html">(see REP-136 for more detail)</a> of Andrea Censi's 
+    CSM package. From 
+    
+    <ul>
+    The C(anonical) Scan Matcher (CSM) is a pure C implementation of a very fast variation of ICP using a point-to-line metric optimized for 
+    range-finder scan matching. It is robust enough to be used in industrial prototypes of autonomous mobile robotics, for example at Kuka. CSM
+    is used by a variety of people, though it is hard to keep track because of the open source distribution, especially as packaged in ROS. If you
+    use this software for something cool, let me know.
+    </ul>
+
+    Original repository can be found <a href = "https://github.com/AndreaCensi/csm">here</a> 
+
+    </description>
+    <!-- Package's author -->
+    <author>Andrea Censi</author>
+    <author email="alexander.karavaev@jetbrains.com">alexander.karavaev</author>
+    <!-- Package's maintainer -->
+    <maintainer email="krzysztof.pierczyk@gmail.com">Krzysztof Pierczyk</maintainer>
+    <!-- Package's license -->
+    <license>LGPL</license>
+    
+    <!-- Package's build dependencies -->
+    <buildtool_depend>ament_cmake</buildtool_depend>
+    <buildtool_depend>cmake_common</buildtool_depend>
+    <!-- Package's buildtime dependencies -->
+    <build_depend>rclcpp</build_depend>
+    <!-- Package's build dependencies (external libraries) -->
+    <build_depend>libeigen3-dev</build_depend>
+    <!-- Package's runtime dependencies -->
+    <exec_depend>rclcpp</exec_depend>
+    <!-- Package's runtime dependencies (external libraries) -->
+    <exec_depend>libeigen3</exec_depend>
+    <!-- Package's test dependencies -->
+    <test_depend>ament_lint_auto</test_depend>
+    <test_depend>ament_lint_common</test_depend>
+
+    <!-- =============================================================================================== -->
+    <!-- @note 'libeigen3-dev' rosdep System Dependency not yet supported in ROS2 Galaxy (Ubuntu Focal); -->
+    <!--    requires manual downloading                                                                  -->
+    <!-- =============================================================================================== -->
+
+    <!-- Package's exports -->
+    <export>
+        <build_type>ament_cmake</build_type>
+    </export>
+
+</package>

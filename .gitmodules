@@ -1,0 +1,3 @@
+[submodule "extern/ros-common"]
+	path = extern/ros-common
+	url = https://github.com/kpierczy/ros-common

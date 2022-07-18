@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+
+    <!-- Package's name -->
+    <name>scan_tools_msgs</name>
+    <!-- Package's version -->
+    <version>0.0.0</version>
+    <!-- Package's description -->
+    <description>
+    
+    Set of ROS interfaces specific for the scan_tools packages
+    
+    </description>
+    <!-- Package's maintainer -->
+    <maintainer email="krzysztof.pierczyk@gmail.com">Krzysztof Pierczyk</maintainer>
+    <!-- Package's license -->
+    <license>MIT</license>
+
+    <!-- Package's build dependencies -->
+    <buildtool_depend>ament_cmake</buildtool_depend>
+    <buildtool_depend>rosidl_default_generators</buildtool_depend>
+    <!-- Package's dependencies -->
+    <depend>geometry_msgs</depend>
+    <!-- Package's runtime dependencies -->
+    <exec_depend>rosidl_default_runtime</exec_depend>
+
+    <!-- Package's interfaces groups -->
+    <member_of_group>rosidl_interface_packages</member_of_group>
+    
+    <!-- Package's exports -->
+    <export>
+        <build_type>ament_cmake</build_type>
+    </export>
+
+</package>

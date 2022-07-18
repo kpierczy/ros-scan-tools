@@ -1,0 +1,20 @@
+# ====================================================================================================================================
+# @file       SetPose.srv
+# @author     Krzysztof Pierczyk (krzysztof.pierczyk@gmail.com)
+# @maintainer Krzysztof Pierczyk (krzysztof.pierczyk@gmail.com)
+# @date       Friday, 1st April 2022 2:04:16 pm
+# @modified   Wednesday, 25th May 2022 4:44:01 pm
+# @project    scan-tools
+# @brief      Auxiliary service message type describing a request-response model for asking a global-localization mode changing the mode
+#    
+#    
+# @copyright Krzysztof Pierczyk © 2022
+# ====================================================================================================================================
+
+# Pose to be set
+geometry_msgs/PoseStamped pose
+---
+# Return status
+bool success
+# Error reason (optional)
+string reason

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+
+    <!-- Package's name -->
+    <name>point_cloud_assembler</name>
+    <!-- Package's version -->
+    <version>0.3.2</version>
+    <!-- Package's description -->
+    <description>Assembles PointCloud messages into single cloud</description>
+    <!-- Package's author -->
+    <author email="krzysztof.pierczyk@gmail.com">Krzysztof Pierczyk</author>
+    <!-- Package's maintainer -->
+    <maintainer email="krzysztof.pierczyk@gmail.com">Krzysztof Pierczyk</maintainer>
+    <!-- Package's license -->
+    <license>MIT</license>
+
+    <!-- Package's buildtool dependencies -->
+    <buildtool_depend>ament_cmake</buildtool_depend>
+    <buildtool_depend>cmake_common</buildtool_depend>
+    <!-- Package's build dependencies -->
+    <build_depend>rclcpp</build_depend>
+    <build_depend>rclcpp_components</build_depend>
+    <build_depend>pcl_ros</build_depend>
+    <build_depend>pcl_conversions</build_depend>
+    <build_depend>node_common_cpp</build_depend>
+    <!-- Package's build dependencies (external libraries) -->
+    <build_depend>libpcl-all-dev</build_depend>
+    <!-- Package's runtime dependencies -->
+    <exec_depend>ros2launch</exec_depend>
+    <exec_depend>rclcpp</exec_depend>
+    <exec_depend>rclcpp_components</exec_depend>
+    <exec_depend>pcl_ros</exec_depend>
+    <exec_depend>pcl_conversions</exec_depend>
+    <!-- Package's runtime dependencies (external libraries) -->
+    <exec_depend>libpcl-all</exec_depend>
+
+    <!-- Package's exports -->
+    <export>
+        <build_type>ament_cmake</build_type>
+    </export>
+
+</package>

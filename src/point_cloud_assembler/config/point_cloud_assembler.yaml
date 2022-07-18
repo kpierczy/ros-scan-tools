@@ -1,0 +1,43 @@
+# ====================================================================================================================================
+# @file       point_cloud_assembler.yaml
+# @author     Krzysztof Pierczyk (krzysztof.pierczyk@gmail.com)
+# @maintainer Krzysztof Pierczyk (krzysztof.pierczyk@gmail.com)
+# @date       Tuesday, 22nd March 2022 3:12:52 am
+# @modified   Wednesday, 25th May 2022 4:44:01 pm
+# @project    scan-tools
+# @brief      Default configuration for the point_cloud_assembler node
+#    
+#    
+# @copyright Krzysztof Pierczyk © 2022
+# ====================================================================================================================================
+
+/**:
+
+    # Parameters
+    ros__parameters:
+
+        # Array of names of input topics.
+        input_topics: [ "cloud_in" ]
+    
+        # Reference frame of the assembled cloud
+        # reference_frame: <default_unset>
+        
+        # Array of names of reference frames indicating those from incoming points clouds
+        # that should be included in the assembled result. Empty or unset array indicates
+        # that all incoming frames should be taken into account    
+        # frames: <default_unset>
+
+        # Assembly mode for the node combining points clouds incoming from LIDAR scaners. 'batch'
+        # mode means, that the combined cloud will be published after at least one fresh update of
+        # measurement from each LIDAR has been received since the last publication. If 'continuous'
+        # mode is set, the combined cloud will be published at each of measurements arrival    
+        combining_mode: "continuous"
+        
+        # Decaying time of incomping clouds' validity in [s]. After the configured time
+        # the last refresh of the given cloud (i.e. cloud associated with the given reference
+        # frame) will be considered invalid and won't be taken into account when publishing
+        # the next cloud assembly. Leaving this parameter unset will result in no validity timeout
+        # validity_decaying_time: <default_unset>
+
+        # Type of the points stored in the processed clouds
+        point_type: XYZ
